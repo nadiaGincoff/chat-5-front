@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import { Stack } from "@chakra-ui/react"
 import Logo from './Logo'
+import Link from 'next/link'
 
 function Layout({ children }) {
     return (
@@ -17,7 +18,9 @@ function Layout({ children }) {
                 padding="3"
                 alignItems='left'
             >
-                <Logo width={100} />
+                <Link href={`/`} passHref >
+                    <Logo width={100} />
+                </Link>
             </Stack>
             <Stack as="main" alignItems="center" justifyContent="center">
                 {children}

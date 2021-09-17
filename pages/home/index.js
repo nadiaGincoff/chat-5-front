@@ -17,12 +17,12 @@ export default function Home(props) {
                 "90%", // 0-30em
                 "70%", // 30em-48em
                 "70%", // 48em-62em
-                "50%", // 62em+
+                "40%", // 62em+
             ]}
             boxShadow='lg'
             spacing={2}
             padding="7"
-            marginTop={{ sm: `8vh`, md: `10vh` }}
+            marginTop={{ sm: `8vh`, md: `5%` }}
         >
             <Text color="white" fontWeight="700" fontSize="30px" maxWidth="300px">Start with latest trends + 3D</Text>
             <Text
@@ -34,17 +34,19 @@ export default function Home(props) {
             >
                 {descriptionText}
             </Text>
-            <Button
-                padding="6"
-                transition='all 400ms ease'
-                _hover={{ boxShadow: 'xl', transform: 'translateY(-1px)' }}
-                minWidth="250px"
-                borderRadius="15"
-                bgGradient="linear-gradient(90deg, rgba(239, 110, 55, 0.97) 15.07%, rgba(254, 202, 76, 0.97) 84.71%);"
-                boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-            >
-                <Text color="white" fontSize="15px" fontWeight="700" lineHeight="18px">INICIAR SESIÓN</Text>
-            </Button>
+            <Link href={`/login/`} passHref>
+                <Button
+                    padding="6"
+                    transition='all 400ms ease'
+                    _hover={{ boxShadow: 'xl', transform: 'translateY(-1px)' }}
+                    minWidth="250px"
+                    borderRadius="15"
+                    bgGradient="linear-gradient(90deg, rgba(239, 110, 55, 0.97) 15.07%, rgba(254, 202, 76, 0.97) 84.71%);"
+                    boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+                >
+                    <Text color="white" fontSize="15px" fontWeight="700" lineHeight="18px">INICIAR SESIÓN</Text>
+                </Button>
+            </Link>
             <Link href={`/register/`} passHref>
                 <Button
                     padding="6"
