@@ -17,12 +17,12 @@ export default function Home(props) {
                 "90%", // 0-30em
                 "70%", // 30em-48em
                 "70%", // 48em-62em
-                "50%", // 62em+
+                "40%", // 62em+
             ]}
             boxShadow='lg'
             spacing={2}
             padding="7"
-            marginTop={{ sm: `8vh`, md: `10vh` }}
+            marginTop={{ sm: `8vh`, md: `5%` }}
         >
             <Text color="white" fontWeight="700" fontSize="30px" maxWidth="300px">Start with latest trends + 3D</Text>
             <Text

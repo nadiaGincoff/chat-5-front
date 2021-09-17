@@ -19,7 +19,7 @@ function Login() {
                 "90%", // 0-30em
                 "70%", // 30em-48em
                 "70%", // 48em-62em
-                "50%", // 62em+
+                "40%", // 62em+
             ]}
             boxShadow='lg'
             spacing={2}
