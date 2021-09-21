@@ -1,7 +1,4 @@
-import { Stack, Text, Button } from '@chakra-ui/react';
-
-// components
-import Header from "./Header";
+import { Stack, Text } from '@chakra-ui/react';
 
 const channels = [
     {
@@ -18,32 +15,30 @@ const channels = [
     }
 ]
 
-function Menu() {
+function MenuBody() {
     return (
-        <Stack>
-            <Header />
-            <Stack flexDirection="column" marginTop="0">
+        <Stack display={{ base: `none` , sm: `flex` }}>
+            <Stack flexDirection="column">
                 {channels.map(channel => {
                     return (
                         <Stack
-                            
+                            spacing={0}
                             justifyContent="center"
                             key={channel.key}
+                            borderBottom="1px solid #606877"
+                            _hover={{ backgroundColor: `gray.700` }}
                             padding={4}
-                            paddingBottom={6}
                             paddingLeft={10}
-                            borderBottom="1px solid #5C4849"
-                            _hover={{ backgroundColor: `#5C4849`}}
                         >
-                            <Text color="white" fontSize="20px">
+                            <Text color="white" fontSize="17px" spacing={0} marginTop="-1">
                                 {channel.name}
                             </Text>
                         </Stack>
                     )
                 })}
-            </Stack> 
+            </Stack>
         </Stack>
     )
 }
 
-export default Menu
+export default MenuBody

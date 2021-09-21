@@ -1,12 +1,13 @@
 import { Stack, Text, Button } from '@chakra-ui/react';
 import Link from 'next/link'
+import Logo from '../../components/Logo'
 
 const descriptionText = `Aliquip enim minim in veniam duis elit. Aute magna sint nostrud dolore. Occaecat tempor cupidatat irure dolor reprehenderit aute amet aute in pariatur aliquip. Amet aute in pariatur aliquip.`
 
 export default function Home(props) {
     return (
         <Stack
-            backgroundColor="rgba(37, 32, 45, 0.57);"
+            backgroundColor="gray.900"
             borderRadius={40}
             height="auto"
             minHeight={400}
@@ -22,9 +23,18 @@ export default function Home(props) {
             boxShadow='lg'
             spacing={2}
             padding="7"
-            marginTop={{ sm: `8vh`, md: `5%` }}
+            marginTop={{ base: `12vh`, sm: `8vh`, md: `5%` }}
         >
-            <Text color="white" fontWeight="700" fontSize="30px" maxWidth="300px">Start with latest trends + 3D</Text>
+            <Stack
+                as='header'
+                paddingTop={{ base: 0, sm: `1em` }}
+                display={{ base: `flex`, sm: `none`}}
+            >
+                <Link href={`/`} passHref >
+                    <Logo width={{ base: `20`, sm: `20`, md: `30`, lg: `40` }} />
+                </Link>
+            </Stack>
+            <Text color="white" fontWeight="700" fontSize={{ base: `25px`, sm: `30px` }} maxWidth="300px">Start with latest trends + 3D</Text>
             <Text
                 color="rgba(142, 147, 153, 1)"
                 boxSizing="border-box"

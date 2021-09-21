@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 function Layout({ children }) {
     return (
-        <Stack height="100vh" backgroundColor='rgba(22, 5, 8, 0.88);'>
+        <Stack height="100vh" backgroundColor='gray.800'>
             <Head>
                 <title>Chat 5</title>
                 <meta name="chat-5" content="Chat 5" />
@@ -15,11 +15,11 @@ function Layout({ children }) {
             </Head>
             <Stack
                 as='header'
-                padding="3"
-                alignItems='left'
+                paddingTop={{ base: 0, sm: `1em` }}
+                display={{ base: `none`, sm: `flex` }}
             >
                 <Link href={`/`} passHref >
-                    <Logo width={100} />
+                    <Logo width={{ base: `10`, sm: `20`, md: `30`, lg: `40` }} height={{ base: 30, sm: 100}} />
                 </Link>
             </Stack>
             <Stack as="main" alignItems="center" justifyContent="center">

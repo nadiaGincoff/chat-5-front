@@ -1,6 +1,7 @@
 import { Stack, Text, Input, InputGroup, InputRightElement, Button } from '@chakra-ui/react'
 import { useState } from 'react'
 import Link from 'next/link'
+import Logo from '../../components/Logo'
 
 function Register() {
     const [show, setShow] = useState(false)
@@ -8,7 +9,7 @@ function Register() {
 
     return (
         <Stack
-            backgroundColor="rgba(37, 32, 45, 0.57);"
+            backgroundColor="gray.900"
             borderRadius={40}
             height="auto"
             minHeight={400}
@@ -24,10 +25,19 @@ function Register() {
             boxShadow='lg'
             spacing={2}
             padding="7"
-            marginTop={{ sm: `10vh`, md: `10vh` }}
+            marginTop={{ base: `10vh`, md: `10vh` }}
         >
+            <Stack
+                as='header'
+                paddingTop={{ base: 0, sm: `1em` }}
+                display={{ base: `flex`, sm: `none` }}
+            >
+                <Link href={`/`} passHref >
+                    <Logo width={{ base: `20` }} />
+                </Link>
+            </Stack>
             <Stack spacing="7" alignItems="center">
-                <Text color="white" fontWeight="700" fontSize="30px">Regístrate en CHAT-5</Text>
+                <Text color="white" fontWeight="700" fontSize={{ base: `25px`, sm: `30px` }}>Regístrate en CHAT-5</Text>
                 <Stack spacing={4}>
                     <Input variant="filled" focusBorderColor="rgba(254, 202, 76, 0.97)" placeholder="Nombre" colorScheme="red"/>
                     <Input variant="filled" focusBorderColor="rgba(254, 202, 76, 0.97)" placeholder="Apellido" />
