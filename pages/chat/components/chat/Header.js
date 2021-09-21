@@ -13,9 +13,9 @@ function Header({ padding, paddingLeft }) {
         <Stack
             flexDirection="row"
             alignItems="center"
-            padding={4}
+            padding={3}
             paddingLeft={10}
-            borderBottom="1px solid gray"
+            borderBottom="1px solid #606877"
         >
             <Icon
                 as={FaBars}

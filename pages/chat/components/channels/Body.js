@@ -25,12 +25,12 @@ function MenuBody() {
                             spacing={0}
                             justifyContent="center"
                             key={channel.key}
-                            borderBottom="1px solid gray"
+                            borderBottom="1px solid #606877"
                             _hover={{ backgroundColor: `gray.700` }}
                             padding={4}
                             paddingLeft={10}
                         >
-                            <Text color="white" fontSize="20px" spacing={0} marginTop="-1">
+                            <Text color="white" fontSize="17px" spacing={0} marginTop="-1">
                                 {channel.name}
                             </Text>
                         </Stack>

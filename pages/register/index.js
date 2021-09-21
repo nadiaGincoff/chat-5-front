@@ -63,7 +63,7 @@ function Register() {
                         _hover={{ boxShadow: 'xl', transform: 'translateY(-1px)' }}
                         width="250px"
                         borderRadius="15"
-                        bgGradient="linear-gradient(90deg, #6E47D2 1.86%, #9960AF 97.79%)"
+                        bgGradient="linear-gradient(90deg, rgba(239, 110, 55, 0.97) 15.07%, rgba(254, 202, 76, 0.97) 84.71%);"
                         boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
                     >
                         <Text color="white" fontSize="15px" fontWeight="700" lineHeight="18px">REGISTRARSE</Text>
