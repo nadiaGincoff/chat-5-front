@@ -2,7 +2,7 @@ import { Stack, Text, Button } from '@chakra-ui/react';
 import { Icon } from "@chakra-ui/react"
 import { FaUserNinja } from "react-icons/fa";
 
-function Header() {
+function MenuHeader({ padding, paddingLeft }) {
     const registeredUser = true
     const initialsOfFullname = `NG`
     const fullName = `Nadia Gincoff`
@@ -11,9 +11,8 @@ function Header() {
         <Stack
             flexDirection="row"
             alignItems="center"
-            padding={4}
-            paddingLeft={10}
-            borderBottom="1px solid #5C4849"
+            padding={padding || 4}
+            paddingLeft={paddingLeft || 10}
         >
             <Stack
                 width="50px"
@@ -25,13 +24,13 @@ function Header() {
             >
                 {registeredUser ? 
                     <Text
-                    fontSize="20px"
-                    fontWeight="700"
-                    color="white"
+                        fontSize="20px"
+                        fontWeight="700"
+                        color="white"
                     >
                         {initialsOfFullname}
                     </Text> :
-                    <Icon as={FaUserNinja} color="white" fontSize="23px"></Icon>
+                    <Icon as={FaUserNinja} color="white" fontSize="23px" /> 
                 }
             </Stack>
             <Text
@@ -48,4 +47,4 @@ function Header() {
     )
 }
 
-export default Header
+export default MenuHeader
